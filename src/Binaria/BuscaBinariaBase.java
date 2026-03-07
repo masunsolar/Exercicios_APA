@@ -12,7 +12,7 @@ public class BuscaBinariaBase {
         System.out.println("Digite qual vai ser o tamanho do vetor: ");
         int tamanho = scanner.nextInt();
 
-        int[] vetor = new int[100];
+        int[] vetor = new int[tamanho];
         Random gerador = new Random();
 
         for (int i = 0; i < vetor.length; i++) {

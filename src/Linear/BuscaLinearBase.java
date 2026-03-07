@@ -8,7 +8,10 @@ public class BuscaLinearBase {
     public static void executar() {
         Scanner scanner = new Scanner(System.in);
 
-        int[] vetor = new int[10];
+        System.out.println("Digite qual vai ser o tamanho do vetor: ");
+        int tamanho = scanner.nextInt();
+
+        int[] vetor = new int[tamanho];
         Random gerador = new Random();
 
         for (int i = 0; i < vetor.length; i++) {
