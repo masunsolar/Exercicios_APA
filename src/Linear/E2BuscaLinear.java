@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
 
-public class BuscaLinearE2 {
+public class E2BuscaLinear {
     public static void executar() {
         Scanner scanner = new Scanner(System.in);
         Random gerador = new Random();

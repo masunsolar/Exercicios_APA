@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
 
-public class SimuladorLoteriaE3 {
+public class E3SimuladorLoteria {
     public static void executar() {
         Scanner scanner = new Scanner(System.in);
         Random gerador = new Random();
@@ -12,7 +12,21 @@ public class SimuladorLoteriaE3 {
         // 1. Gerar 6 números sorteados (1 a 60)
         int[] sorteados = new int[6];
         for (int i = 0; i < sorteados.length; i++) {
-            sorteados[i] = gerador.nextInt(60) + 1;
+            int novoNumero = gerador.nextInt(60) + 1;
+
+            // "Enquanto o número for repetido, gere um novo"
+            boolean repetido = true;
+            while (repetido) {
+                repetido = false; // Assume que é único
+                for (int j = 0; j < i; j++) {
+                    if (sorteados[j] == novoNumero) {
+                        repetido = true; // achou um igual
+                        novoNumero = gerador.nextInt(60) + 1; // Gera outro
+                        break; // Sai do loop 'j' para testar o novoNumero desde o início
+                    }
+                }
+            }
+            sorteados[i] = novoNumero;
         }
 
         // 2. Entrada do usuário (6 números)
@@ -28,11 +42,11 @@ public class SimuladorLoteriaE3 {
         int acertosContador = 0;
         String numerosAcertados = "";
 
-        // Para cada número da aposta...
+        // Para cada número da aposta
         for (int i = 0; i < aposta.length; i++) {
             int numeroAtual = aposta[i];
 
-            // ...fazemos uma busca linear no vetor de sorteados
+            // fazendo uma busca linear no vetor de sorteados
             for (int j = 0; j < sorteados.length; j++) {
                 if (sorteados[j] == numeroAtual) {
                     acertosContador++;

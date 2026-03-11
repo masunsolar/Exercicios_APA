@@ -3,8 +3,8 @@ import java.util.Scanner;
 import Binaria.BuscaBinariaBase;
 import Binaria.DiscursivaBi;
 import Linear.BuscaLinearBase;
-import Linear.BuscaLinearE2;
-import Linear.SimuladorLoteriaE3;
+import Linear.E2BuscaLinear;
+import Linear.E3SimuladorLoteria;
 import Linear.Exercicio4;
 
 public class Main {
@@ -34,10 +34,10 @@ public class Main {
                     BuscaLinearBase.executar();
                     break;
                 case 3:
-                    BuscaLinearE2.executar();
+                    E2BuscaLinear.executar();
                     break;
                 case 4:
-                    SimuladorLoteriaE3.executar();
+                    E3SimuladorLoteria.executar();
                     break;
                 case 5:
                     Exercicio4.executar();
