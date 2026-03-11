@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 public class E3SimuladorLoteria {
     public static void executar() {
+        System.out.println("\n\n\n\n");
         Scanner scanner = new Scanner(System.in);
         Random gerador = new Random();
 

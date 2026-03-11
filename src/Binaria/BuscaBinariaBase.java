@@ -7,6 +7,7 @@ import java.util.Arrays;
 
 public class BuscaBinariaBase {
     public static void executar() {
+        System.out.println("\n\n\n\n");
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Digite qual vai ser o tamanho do vetor: ");
